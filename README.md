@@ -13,8 +13,8 @@ Recently, it's become increasingly difficult to gain access to development APIs 
 * Other:
   * [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) and/or [geckodriver](https://github.com/mozilla/geckodriver/releases)
 * Suggested:
- * [fake-useragent](https://github.com/hellysmile/fake-useragent)
- * VPN
+  * [fake-useragent](https://github.com/hellysmile/fake-useragent)
+  * VPN
 
 ## Notes
 * ChromeDriver is great for running headless environments
