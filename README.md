@@ -20,4 +20,5 @@ Recently, it's become increasingly difficult to gain access to development APIs 
 * [ ] Looking to further tune the program to run in conjuction with fake-useragent
 
 ## Known Issues
-* 09.17.18 - Selenium: loss of element; observed between data captures in the range of 600 to 900
+* 09.17.18 - Selenium: loss of reference element observed between data captures in the range of 600 to 900
+* 09.17.18 - ChromeDriver: process persistence following program exception
