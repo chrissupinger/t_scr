@@ -18,4 +18,4 @@ Recently, it's become increasingly difficult to gain access to development APIs 
   * ChromeDriver and/or geckodriver
 
 ## Known Issues:
-* Sep, 17 18 - Selenium: loss of element; observed between data captures in the range of 600 to 900
+* 09.17.18 - Selenium: loss of element; observed between data captures in the range of 600 to 900
