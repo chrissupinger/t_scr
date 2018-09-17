@@ -1,7 +1,7 @@
 # t_scr: A Twitter Scraping Solution
 
 ## Purpose
-Recently, it's become increasingly difficult to gain access to development APIs for social media platforms.  This program was quickly created to data mine corpora for the purpose of a computational linguistics project; additionally, it avoids the need for an account or access to a development API.  It's solely concerned with text data.
+Recently, it's become increasingly difficult to gain access to development APIs for social media platforms.  This program was quickly created to data mine corpora for the purpose of a computational linguistics project; additionally, it avoids the need for an account or access to a development API.  It's solely concerned with publicly available text data.
 
 ## Dependencies
 * Python:
