@@ -8,10 +8,10 @@ Recently, it's become increasingly difficult to gain access to development APIs 
 
 ## Dependencies:
 * Python:
-  * [Selenium] (https://selenium-python.readthedocs.io)
-  * [SQLAlchemy] (http://www.sqlalchemy.org)
+  * [Selenium](https://selenium-python.readthedocs.io)
+  * [SQLAlchemy](http://www.sqlalchemy.org)
 * Other:
-  * [ChromeDriver] (https://sites.google.com/a/chromium.org/chromedriver/) and/or [geckodriver] (https://github.com/mozilla/geckodriver/releases)
+  * [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) and/or [geckodriver](https://github.com/mozilla/geckodriver/releases)
 
 ## Known Issues:
 * 09.17.18 - Selenium: loss of element; observed between data captures in the range of 600 to 900
