@@ -11,14 +11,15 @@ Recently, it's become increasingly difficult to gain access to development APIs 
   * [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) and/or [geckodriver](https://github.com/mozilla/geckodriver/releases)
 * Suggested:
   * [fake-useragent](https://github.com/hellysmile/fake-useragent)
-  * VPN
+  * [VPN](https://www.cnet.com/best-vpn-services-directory/)
 
 ## Notes
 * ChromeDriver is great for running headless environments
 
-## Working
-* [ ] Looking to further tune the program to run in conjuction with fake-useragent
-
 ## Known Issues
-* 09.17.18 - Selenium: loss of reference element observed between data captures in the range of 600 to 900
-* 09.17.18 - ChromeDriver: process persistence following program exception
+* [ ] 09.17.18 - Selenium: loss of reference element observed between data captures in the range of 600 to 900
+* [ ] 09.17.18 - ChromeDriver: process persistence following program exception
+* [ ] 09.17.18 - fake-useragent: incorporate functionality
+
+## Updates
+* [x] 09.17.18 - \_func.py: added greater flexibility for scanning variations in Twitter page structures; also added the ability to capture the number of replies, retweets and favorites
