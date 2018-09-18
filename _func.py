@@ -209,7 +209,9 @@ def t_scrape(origin, start, end):
 
                         _get_id = _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]' % start)
                         _id = _get_id.get_attribute('data-tweet-id')
-                        pass
+                        _record = t_db(_id, origin, None, None, None, None, None, None, None)
+                        _session.add(_record)
+                        _session.commit()
                         print('Error processing Tweet ID {}. {} of {}.'.format(int(_id), start, end))
 
     if start < end:
