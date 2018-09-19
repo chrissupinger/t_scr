@@ -17,6 +17,7 @@ Recently, it's become increasingly difficult to gain access to development APIs 
 * ChromeDriver is great for running headless environments
 
 ## Updates
+* 09.19.18 - *\_func.py*: modified to eliminate some code redundancy; additional modifications needed
 * 09.18.18 - *\_func.py*: slightly modified to handle more variations in Twitter page structures
 * 09.17.18 - *\_func.py*: added greater flexibility for scanning variations in Twitter page structures; also added the ability to capture the number of replies, retweets and favorites
 
