@@ -23,7 +23,7 @@ Recently, it's become increasingly difficult to gain access to development APIs 
 
 ## Known/Working Issues
 * [ ] 09.18.18 - *\_prog.py*: linearize program initiation and set boundaries to avoid anomalies
-* [ ] 09.17.18 - Selenium: loss of reference element observed between data captures in the range of 400 to 900; due to dynamic page structures
+* [ ] 09.17.18 - Selenium: loss of reference element observed between data captures in the range of ~~400~~ 800 to 900; due to dynamic page structures
 * [ ] 09.17.18 - ChromeDriver: process persistence following program exception
 * [ ] 09.17.18 - fake-useragent: incorporate functionality
 * [ ] 09.17.18 - *\_func.py*: code redundancy
