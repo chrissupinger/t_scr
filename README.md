@@ -20,6 +20,7 @@ This program specifically targets public profiles and doesn't require a Twitter 
 * ChromeDriver is great for running headless environments
 
 ## Updates
+* 10.02.18 - *\_func.py*: modified to moderately condense structure
 * 09.19.18 - *\_func.py*: modified to eliminate some code redundancy; additional modifications needed
 * 09.18.18 - *\_func.py*: slightly modified to handle more variations in Twitter page structures
 * 09.17.18 - *\_func.py*: added greater flexibility for scanning variations in Twitter page structures; also added the ability to capture the number of replies, retweets and favorites
