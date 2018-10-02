@@ -18,11 +18,16 @@ _opt = webdriver.ChromeOptions()
 _opt.add_argument('headless')
 _dr = webdriver.Chrome(chrome_options = _opt)
 
+[_c_fix, _s_fix] = [
+    '/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div/div/ul/li[1]/a/span[3]',
+    '/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/'
+]
+
 def get_count(origin):
 
-    _dr.get("https://twitter.com/" + origin)
+    _dr.get('https://twitter.com/' + origin)
     time.sleep(2)
-    _data_count = _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div/div/ul/li[1]/a/span[3]')
+    _data_count = _dr.find_element_by_xpath(_c_fix)
     _count = _data_count.get_attribute('data-count')
     print('This profile has {} items that can be retrieved.'.format(int(_count)))
 
@@ -34,44 +39,45 @@ def get_page(origin, start, end):
 
 def t_scrape(origin, start, end):
 
-    _dr.execute_script('arguments[0].scrollIntoView();', _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]' % start))
+    _dr.execute_script('arguments[0].scrollIntoView();', _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]' % start))
 
     [_get_content, _get_timestamp, _get_tweet] = [
-        _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]' % start),
-        _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[1]/small/a/span' % start),
-        _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]' % start)]
+        _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]' % start),
+        _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[1]/small/a/span' % start),
+        _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]' % start)]
 
     _get_timestamp = _get_timestamp.get_attribute('data-time')
 
     try:
         [_get_reply, _get_retweet, _get_favorite] = [
-            _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[3]/div[1]/span[1]/span' % start),
-            _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[3]/div[1]/span[2]/span' % start),
-            _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[3]/div[1]/span[3]/span' % start)
+            _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[3]/div[1]/span[1]/span' % start),
+            _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[3]/div[1]/span[2]/span' % start),
+            _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[3]/div[1]/span[3]/span' % start)
         ]
     except:
         try:
             [_get_reply, _get_retweet, _get_favorite] = [
-                _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[4]/div[1]/span[1]/span' % start),
-                _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[4]/div[1]/span[2]/span' % start),
-                _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[4]/div[1]/span[3]/span' % start)
+                _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[4]/div[1]/span[1]/span' % start),
+                _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[4]/div[1]/span[2]/span' % start),
+                _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[4]/div[1]/span[3]/span' % start)
             ]
         except:
             try:
                 [_get_reply, _get_retweet, _get_favorite] = [
-                    _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[5]/div[1]/span[1]/span' % start),
-                    _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[5]/div[1]/span[2]/span' % start),
-                    _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[5]/div[1]/span[3]/span' % start)
+                    _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[5]/div[1]/span[1]/span' % start),
+                    _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[5]/div[1]/span[2]/span' % start),
+                    _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[5]/div[1]/span[3]/span' % start)
                 ]
             except:
                 try:
                     [_get_reply, _get_retweet, _get_favorite] = [
-                        _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[6]/div[1]/span[1]/span' % start),
-                        _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[6]/div[1]/span[2]/span' % start),
-                        _dr.find_element_by_xpath('/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/li[%d]/div[1]/div[2]/div[6]/div[1]/span[3]/span' % start)
+                        _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[6]/div[1]/span[1]/span' % start),
+                        _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[6]/div[1]/span[2]/span' % start),
+                        _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]/div[2]/div[6]/div[1]/span[3]/span' % start)
                     ]
                 except:
-                    print('Error processing Tweet.')                    
+                    _id = _get_content.get_attribute('data-item-id')
+                    print('Error processing Tweet {}. {} of {}.'.format(int(_id), start, end))
                     _dr.close()
                     _dr.quit()
                     quit()
