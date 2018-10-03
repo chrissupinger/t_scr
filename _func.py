@@ -18,13 +18,9 @@ _opt = webdriver.ChromeOptions()
 _opt.add_argument('headless')
 _dr = webdriver.Chrome(chrome_options = _opt)
 
-[_c_fix, _s_fix] = [
-    '/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div/div/ul/li[1]/a/span[3]',
-    '/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/'
-]
-
 def get_count(origin):
 
+    _c_fix = '/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div/div/ul/li[1]/a/span[3]'
     _dr.get('https://twitter.com/' + origin)
     time.sleep(2)
     _data_count = _dr.find_element_by_xpath(_c_fix)
@@ -38,6 +34,8 @@ def get_page(origin, start, end):
     t_scrape(origin, start, end)
 
 def t_scrape(origin, start, end):
+
+    _s_fix = '/html/body/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[4]/div/div[2]/ol[1]/'
 
     _dr.execute_script('arguments[0].scrollIntoView();', _dr.find_element_by_xpath(_s_fix + 'li[%d]/div[1]' % start))
 
