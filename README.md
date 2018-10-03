@@ -14,7 +14,7 @@ This program specifically targets public profiles and doesn't require a Twitter 
   * [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) and/or [geckodriver](https://github.com/mozilla/geckodriver/releases)
 * Suggested:
   * [fake-useragent](https://github.com/hellysmile/fake-useragent)
-  * [VPN](https://www.cnet.com/best-vpn-services-directory/)
+  * VPN - Found [here](https://www.cnet.com/best-vpn-services-directory/) & [here](https://www.pcmag.com/article2/0,2817,2403388,00.asp)
 
 ## Notes
 * ChromeDriver is great for running headless environments
