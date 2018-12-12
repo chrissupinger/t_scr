@@ -31,3 +31,6 @@ This program specifically targets public profiles and doesn't require a Twitter 
 * [ ] 09.17.18 - ChromeDriver: process persistence following program exception
 * [ ] 09.17.18 - fake-useragent: incorporate functionality
 * [ ] 09.17.18 - *\_func.py*: code redundancy
+
+## License
+* © 2018 Chris Supinger (see LICENSE).  This project is powered by open-source software.
