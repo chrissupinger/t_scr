@@ -33,4 +33,4 @@ This program specifically targets public profiles and doesn't require a Twitter 
 * [ ] 09/17/18 - *\_func.py*: code redundancy
 
 ## License
-* © 2018 Chris Supinger (see LICENSE).  This project is powered by open-source software.
+* © 2018-9 Chris Supinger (see LICENSE).  This project is powered by open-source software.
