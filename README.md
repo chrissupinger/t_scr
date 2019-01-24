@@ -20,17 +20,17 @@ This program specifically targets public profiles and doesn't require a Twitter 
 * ChromeDriver is great for running headless environments
 
 ## Updates
-* 10.02.18 - *\_func.py*: modified to moderately condense structure
-* 09.19.18 - *\_func.py*: modified to eliminate some code redundancy; additional modifications needed
-* 09.18.18 - *\_func.py*: slightly modified to handle more variations in Twitter page structures
-* 09.17.18 - *\_func.py*: added greater flexibility for scanning variations in Twitter page structures; also added the ability to capture the number of replies, retweets and favorites
+* 10/02/18 - *\_func.py*: modified to moderately condense structure
+* 09/19/18 - *\_func.py*: modified to eliminate some code redundancy; additional modifications needed
+* 09/18/18 - *\_func.py*: slightly modified to handle more variations in Twitter page structures
+* 09/17/18 - *\_func.py*: added greater flexibility for scanning variations in Twitter page structures; also added the ability to capture the number of replies, retweets and favorites
 
 ## Known/Working Issues
-* [ ] 09.22.18 - Selenium: loss of reference element observed between data captures in the range of ~~400~~ 800 to 900; due to dynamic page structures
-* [ ] 09.18.18 - *\_prog.py*: linearize program initiation and set boundaries to avoid anomalies
-* [ ] 09.17.18 - ChromeDriver: process persistence following program exception
-* [ ] 09.17.18 - fake-useragent: incorporate functionality
-* [ ] 09.17.18 - *\_func.py*: code redundancy
+* [ ] 09/22/18 - Selenium: loss of reference element observed between data captures in the range of ~~400~~ 800 to 900; due to dynamic page structures
+* [ ] 09/18/18 - *\_prog.py*: linearize program initiation and set boundaries to avoid anomalies
+* [ ] 09/17/18 - ChromeDriver: process persistence following program exception
+* [ ] 09/17/18 - fake-useragent: incorporate functionality
+* [ ] 09/17/18 - *\_func.py*: code redundancy
 
 ## License
 * © 2018 Chris Supinger (see LICENSE).  This project is powered by open-source software.
